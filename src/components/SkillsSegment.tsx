@@ -1,17 +1,28 @@
 import { Component, ReactNode } from "react";
+import { Link, Element } from "react-scroll";
+import { BackgroundFloatingElement } from "./BackgroundFloatingElement";
 import { SkillCategory } from "./SkillCategory";
 
 export class SkillsSegment extends Component {
 
     bs: string[] = ["C#", "ASP.NET", ".Net", "PostgreSQL", "EF Core", "REST"]
     fs: string[] = ["React", "Angular", "HTML/CSS", "TS&JS", "Tailwind & Bootstrap"];
-    os: string[] = ["Git", "Windows/Linux", "VSCode", "Postman", "Automatic tests"];
+    os: string[] = ["Git", "Windows & Linux", "VSCode", "Postman", "Automatic tests"];
+
+    componentDidMount() {
+        this.vod();
+    }
+
+    vod() {
+
+    }
 
     render(): ReactNode {
         return (
             <div className="segment relative flex justify-center items-center" style={{
                 minHeight: 1000
             }}>
+                <Element name="skills" className="element" />
                 <div>
                     <div className="transform rotate-1 absolute" style={{
                         width: "200vw",
@@ -20,6 +31,7 @@ export class SkillsSegment extends Component {
                         left: -20,
                         backgroundColor: "#B9B7BD"
                     }}></div>
+
                 </div>
                 <div className="w-full flex justify-center">
                     <div className="items-start justify-between p-24 flex flex-col md:flex-row">

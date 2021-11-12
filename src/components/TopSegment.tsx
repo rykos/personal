@@ -1,10 +1,12 @@
 import { Component, ReactNode } from "react";
+import { Link, Element } from "react-scroll";
 import bgImg from './1.svg';
 
 export class TopSegment extends Component {
     render(): ReactNode {
         return (
             <div className="relative segment flex justify-center">
+                <Element name="top" className="element" />
                 <div className="absolute w-full h-full selectDisable">
                     <img className="absolute selectDisable" src={bgImg} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="" draggable="false" />
                     <img className="absolute transform rotate-180 selectDisable" src={bgImg} style={{ height: "100%", width: "100%", objectFit: "cover" }} draggable="false" alt="" />
