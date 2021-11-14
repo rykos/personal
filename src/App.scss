@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 body{
     font-family: 'Sora', sans-serif;
@@ -39,4 +39,8 @@ body{
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}  
+}
+
+.scroll-anchor{
+    @apply absolute top-0;
+}

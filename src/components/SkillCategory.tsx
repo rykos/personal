@@ -1,4 +1,5 @@
 import { Component, ReactNode } from "react";
+import 'animate.css'
 
 interface SkillCategoryProps {
     title: string;
@@ -12,7 +13,7 @@ export class SkillCategory extends Component<SkillCategoryProps> {
                 <div className="text-3xl cursor-default">{this.props.title}</div>
                 <ul className="list-disc list-inside text-xl">
                     {this.props.skills.map(x => {
-                        return <li key={x} className="hover-underline-animation cursor-default">{x}</li>
+                        return <li key={x} className="hover-underline-animation cursor-default animate__animated animate__bounce">{x}</li>
                     })}
                 </ul>
             </div>

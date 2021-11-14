@@ -1,7 +1,6 @@
 import { Component, ReactNode } from "react";
-import { Link, Element } from "react-scroll";
-import { BackgroundFloatingElement } from "./BackgroundFloatingElement";
-import { SkillCategory } from "./SkillCategory";
+import { Element } from "react-scroll";
+import { SkillCategory } from "../components/SkillCategory";
 
 export class SkillsSegment extends Component {
 
@@ -9,20 +8,12 @@ export class SkillsSegment extends Component {
     fs: string[] = ["React", "Angular", "HTML/CSS", "TS&JS", "Tailwind & Bootstrap"];
     os: string[] = ["Git", "Windows & Linux", "VSCode", "Postman", "Automatic tests"];
 
-    componentDidMount() {
-        this.vod();
-    }
-
-    vod() {
-
-    }
-
     render(): ReactNode {
         return (
             <div className="segment relative flex justify-center items-center" style={{
                 minHeight: 1000
             }}>
-                <Element name="skills" className="element" />
+                <Element name="skills" className="scroll-anchor" />
                 <div>
                     <div className="transform rotate-1 absolute" style={{
                         width: "200vw",
