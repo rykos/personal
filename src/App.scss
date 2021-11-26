@@ -2,13 +2,15 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
 body{
     font-family: 'Sora', sans-serif;
     overflow-x: hidden;
 }
 
 .segment{
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .selectDisable {
@@ -43,4 +45,12 @@ body{
 
 .scroll-anchor{
     @apply absolute top-0;
+}
+
+.project-element{
+    @apply border-2 border-gray-400 cursor-pointer rounded-3xl px-2 py-1 bg-gray-100 transition-all transform hover:scale-105 hover:bg-gray-200 shadow mx-1 my-1;
+}
+
+.testing>div>div>div{
+    @apply rounded-3xl overflow-hidden
 }

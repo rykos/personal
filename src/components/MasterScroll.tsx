@@ -1,5 +1,5 @@
 import { Component, ReactNode } from "react";
-import { Events, Link, scroller } from "react-scroll";
+import { Events, scroller } from "react-scroll";
 
 export class MasterScroll extends Component<{}, { activeSegment: string }> {
     lastPos: number = 0;
@@ -60,7 +60,8 @@ export class MasterScroll extends Component<{}, { activeSegment: string }> {
 
     go(delta: number) {
         // Ignore js retardation
-        if (Math.abs(delta) < 2)
+        console.log(delta);
+        if (Math.abs(delta) < 2 || Math.abs(delta) > 800)
             return;
 
         this.scaleSegment(delta);
@@ -84,7 +85,7 @@ export class MasterScroll extends Component<{}, { activeSegment: string }> {
 
     scaleSegment(direction: number) {
         this.isScrolling = true;
-        let index = this.segments.findIndex(x => x == this.state.activeSegment);
+        let index = this.segments.findIndex(x => x === this.state.activeSegment);
         if (direction > 0)
             index++;
         else
@@ -110,7 +111,7 @@ export class MasterScroll extends Component<{}, { activeSegment: string }> {
 
     render(): ReactNode {
         return (
-            <div className={`${this.state.activeSegment == this.segments[0] ? "opacity-0" : "opacity-75"} transition-all duration-1000 fixed w-12 h-12 bg-gray-500 border-2 border-opacity-75 border-gray-900 rounded p-3 z-50`} onClick={() => { this.backToTop() }} style={{
+            <div className={`${this.state.activeSegment === this.segments[0] ? "opacity-0" : "opacity-75"} transition-all duration-1000 fixed w-12 h-12 bg-gray-500 border-2 border-opacity-75 border-gray-900 rounded p-3 z-50`} onClick={() => { this.backToTop() }} style={{
                 bottom: "1rem",
                 right: "1rem"
             }}>
