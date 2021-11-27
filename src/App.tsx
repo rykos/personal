@@ -7,7 +7,7 @@ import { ProjectsSegment } from './views/ProjectsSegment';
 class App extends Component {
   render(): React.ReactNode {
     return (
-      <div className='relative'>
+      <div className='relative overflow-x-hidden'>
         {/* <MasterScroll></MasterScroll> */}
         <TopSegment></TopSegment>
         <SkillsSegment></SkillsSegment>
