@@ -8,7 +8,11 @@ COPY package.json ./
 COPY package-lock.json ./
 
 RUN npm install
+RUN npm i http-server
 
 COPY . ./
 
-CMD ["npm","start"]
+RUN npm run build
+
+EXPOSE 443
+CMD ["http-server", "/app/build", "-S", "-p", "443", "-C", "/var/imported/ssl/cert.pem", "-K", "/var/imported/ssl/privkey.pem"]
