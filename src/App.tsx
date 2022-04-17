@@ -3,6 +3,7 @@ import './App.scss';
 import { SkillsSegment } from './views/SkillsSegment';
 import { TopSegment } from './views/TopSegment';
 import { ProjectsSegment } from './views/ProjectsSegment';
+import { ContactSegment } from './views/ContactSegment';
 
 class App extends Component {
   render(): React.ReactNode {
@@ -12,6 +13,7 @@ class App extends Component {
         <TopSegment></TopSegment>
         <SkillsSegment></SkillsSegment>
         <ProjectsSegment></ProjectsSegment>
+        <ContactSegment></ContactSegment>
       </div>
     )
   }

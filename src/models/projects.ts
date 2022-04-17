@@ -1,4 +1,4 @@
-import { GenPaths } from './../components/GenPaths';
+import { GenPaths, PlaceHolder } from './../components/GenPaths';
 export interface IProject {
     name: string;
     description: string;
@@ -15,7 +15,8 @@ export const projects: IProject[] = [
     {
         name: "Restaurant",
         description: "First project using angular, thats why it looks like that. Owner can easly adjust open times, manage dishes and view active orders.",
-        images: GenPaths("./images/Restaurant", 11, ".jpg")
+        images: GenPaths("./images/Restaurant", 11, ".jpg"),
+        inDev: true
     },
     {
         name: "PostWork",
@@ -26,12 +27,16 @@ export const projects: IProject[] = [
         name: "AuctionHouse",
         description: "Platform made for game item transaction for games that have no in-game auction house. Transactions can only be done using server side currency to avoid long wait times and false buyouts.",
         images: GenPaths("./images/AuctionHouse", 8, ".jpg"),
-        tags: ["C#", "Angular", "TypeScript", "ASP.NET", "PostgreSQL","ASP.NET", "PostgreSQL"]
+        tags: ["C#", "Angular", "TypeScript", "ASP.NET", "PostgreSQL", "ASP.NET", "PostgreSQL"]
     },
     {
         name: "BattleShips",
         description: "Battleship board game simulation between computers. Game algorithm is being processed on backend C# API, React works as UI that fetches game from API and displays it in user friendly way.",
         images: GenPaths("./images/Battleships", 2),
-        inDev: true
+    },
+    {
+        name: "TestGround",
+        description: "",
+        images: PlaceHolder(),
     },
 ]

@@ -8,7 +8,7 @@ import gitIcon from '../giticon.png'
 export class TopSegment extends Component {
     render(): ReactNode {
         return (
-            <div className="relative segment h-screen flex justify-center">
+            <div className="relative segment h-screen flex justify-center z-10">
                 <Element name="top" className="scroll-anchor" />
                 {/*  */}
                 <div className="absolute top-0 bg-gray-300 z-50 rounded-3xl overflow-hidden p-1" style={{height: "50px", width: "50px"}}>
