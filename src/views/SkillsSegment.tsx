@@ -13,7 +13,7 @@ export const SkillsSegment = () => {
     let os: string[] = ["Git", "Windows & Linux", "VSCode", "Postman", "Automatic tests"];
 
     let back_devTools = ["pgAdmin", "Postman", "Jmeter"];
-    let front_devTools = ["SCSS", "Lighthouse"];
+    let front_devTools = ["Lighthouse"];
     let other_devTools = ["Docker", "Jira"];
 
     const [ref, inView] = useInView({ threshold: 0.65, triggerOnce: true });
@@ -32,7 +32,7 @@ export const SkillsSegment = () => {
                 <div className="transform w-full absolute bg-gray-200 top-0 h-3/6" style={{ zIndex: -10 }}></div>
             </div>
             <div className="w-full flex justify-center mt-24 mb-24 align-bottom">
-                <div className={classNames("opacity-0 animate__animated items-start bg-white items-center flex flex-col border shadow rounded-2xl md:flex-row",
+                <div className={classNames("opacity-0 animate__animated bg-white items-center flex flex-col border shadow rounded-2xl md:flex-row",
                     { "animate__bounceInDown": inView }, { "opacity-100": inView })}>
                     <SkillCategory icon={ico1} i={0} title="Backend" skills={bs} devTools={back_devTools}></SkillCategory>
                     <div className="w-full border-t md:w-0 md:h-full md:border-r"></div>
