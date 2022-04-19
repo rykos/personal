@@ -1,6 +1,7 @@
 import { Component, ReactNode } from "react";
 import ReactImageGallery from "react-image-gallery";
 import { IProject } from "../models/projects";
+import { TechElement } from "./TechElement";
 
 export class ProjectElement extends Component<{ active: IProject }> {
     render(): ReactNode {
@@ -17,7 +18,7 @@ export class ProjectElement extends Component<{ active: IProject }> {
                             this.props.active.tags &&
                             <div className="flex space-x-1 flex-wrap justify-center">
                                 {this.props.active.tags.map((x, i) => {
-                                    return <div key={`${x}/${i}`} className="text-sm border rounded-2xl py-1 px-2 cursor-default mt-1 hover:border-yellow-300">{x}</div>
+                                    return <TechElement key={`${x}/${i}`} name={x} />
                                 })}
                             </div>
                         }
@@ -25,7 +26,7 @@ export class ProjectElement extends Component<{ active: IProject }> {
                     {/* Images */}
                     <div className="flex flex-col rounded-t-3xl relative overflow-hidden w-full md:w-3/6">
                         <div className="testing">
-                            <ReactImageGallery showThumbnails={false} items={this.props.active.images} />
+                            <ReactImageGallery autoPlay={false} showPlayButton={false} lazyLoad={true} showThumbnails={false} items={this.props.active.images} />
                         </div>
                         {
                             (this.props.active.inDev) &&

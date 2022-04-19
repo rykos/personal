@@ -12,7 +12,9 @@ export class TopSegment extends Component {
                 <Element name="top" className="scroll-anchor" />
                 {/*  */}
                 <div className="absolute top-0 bg-gray-300 z-50 rounded-3xl overflow-hidden p-1" style={{ height: "50px", width: "50px" }}>
-                    <img src={gitIcon} className="" alt="" />
+                    <a href="https://github.com/rykos">
+                        <img src={gitIcon} className="" alt="" />
+                    </a>
                 </div>
 
                 <div className="absolute w-full h-full selectDisable">

@@ -14,5 +14,6 @@
     },
     "files.associations": {
         "*.scss": "postcss"
-    }
+    },
+    "scss.validate": false
 }

@@ -4,6 +4,7 @@ import { SkillsSegment } from './views/SkillsSegment';
 import { TopSegment } from './views/TopSegment';
 import { ProjectsSegment } from './views/ProjectsSegment';
 import { ContactSegment } from './views/ContactSegment';
+import { MoreSegment } from './views/MoreSegment';
 
 class App extends Component {
   render(): React.ReactNode {
@@ -13,6 +14,7 @@ class App extends Component {
         <TopSegment></TopSegment>
         <SkillsSegment></SkillsSegment>
         <ProjectsSegment></ProjectsSegment>
+        <MoreSegment></MoreSegment>
         <ContactSegment></ContactSegment>
       </div>
     )
