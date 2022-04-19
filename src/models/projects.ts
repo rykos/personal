@@ -17,7 +17,7 @@ export const projects: IProject[] = [
         description: `I wanted a highly customizable blog that is easy to read and where i can easily filter custom data from my posts, so I made this one. 
         It handles text, code, images and videos all of which are compressed into database`,
         tags: ["C#", "React", "Tailwind", "TypeScript", "ASP.NET", "PostgreSQL"],
-        images: PlaceHolder(),
+        images: GenPaths("./images/My blog", 3, ".png"),
     },
     {
         name: "Portfolio",
@@ -36,7 +36,7 @@ export const projects: IProject[] = [
         name: "TOD CMS",
         description: `Content managment tools for my games. Including custom node driven system handling items, characters, quests, etc.`,
         tags: ["C#", "React", "Tailwind", "TypeScript", "ASP.NET", "PostgreSQL"],
-        images: PlaceHolder(),
+        images: GenPaths("./images/TOD CMS", 1, ".png"),
     },
     {
         name: "BattleShips",
